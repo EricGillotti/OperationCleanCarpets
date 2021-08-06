@@ -1,22 +1,37 @@
 import React from "react"
 import './App.css'
 import Navbar from "./components/Navbar/Navbar"
+import Home from "./pages/Home";
+import AboutUs from "./pages/AboutUs";
+import Gallery from "./pages/Gallery";
+import Services from "./pages/Services";
+import SpecialOffers from "./pages/SpecialOffers";
+import ContactUs from "./pages/ContactUs";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+
+
+/*Different pages are just react components*/
 
 function App() {
     return (
-        <div className="App">
-            <Navbar />
-            <h6 className="App-header">
-                <a
-                className="App-link"
-                href="https://www.facebook.com/Gparentisprofessionalcarpetcleaning/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >
-                Visit our Facebook page!
-                </a>
-            </h6>
-        </div>
+        <Router>
+            <div className="App">
+                <Navbar />
+                <Switch>
+                    <Route path="/" exact><Home /></Route>
+                    <Route path="/AboutUs"><AboutUs /></Route>
+                    <Route path="/Gallery"><Gallery /></Route>
+                    <Route path="/Services"><Services /></Route>
+                    <Route path="/SpecialOffers"><SpecialOffers /></Route>
+                    <Route path="/ContactUs"><ContactUs /></Route>
+                </Switch>
+            </div>
+        </Router>
     );
 }
 
