@@ -1,0 +1,25 @@
+.FooterArea {
+    background: rgb(61, 56, 56);
+    height: 15%;
+    font-size: 1rem;
+}
+
+.FooterContainer {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 100%;
+    height: 100%;
+}
+
+.FooterCenter {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    text-align: center;
+    padding: 5%;
+}
+
+.CopyrightDisclaimer {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}

@@ -11,11 +11,9 @@ class Navbar extends Component {
 
     render() {
         return(
-            <nav className="NavbarItems">
-                <h1 className="navbar-logo">
-                    <a href="/">
-                    React
-                    </a>
+            <nav className="NavbarArea">
+                <h1 className="navbar-title" url="/">
+                    <a href="/" className="navbar-title-format">G. Parenti's Professional Carpet Cleaning</a>
                 </h1>
                 <div className="menu-icon" onClick={this.handleClick}>
                     <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>

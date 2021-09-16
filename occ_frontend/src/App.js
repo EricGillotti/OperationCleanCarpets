@@ -1,9 +1,11 @@
-import React from "react"
-import './App.css'
-import Navbar from "./components/Navbar/Navbar"
+import React from "react";
+import './App.css';
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Gallery from "./pages/Gallery";
+import { SliderData } from './pages/SliderData';
 import Services from "./pages/Services";
 import SpecialOffers from "./pages/SpecialOffers";
 import ContactUs from "./pages/ContactUs";
@@ -25,11 +27,12 @@ function App() {
                 <Switch>
                     <Route path="/" exact><Home /></Route>
                     <Route path="/AboutUs"><AboutUs /></Route>
-                    <Route path="/Gallery"><Gallery /></Route>
+                    <Route path="/Gallery"><Gallery slides={SliderData} /></Route>
                     <Route path="/Services"><Services /></Route>
                     <Route path="/SpecialOffers"><SpecialOffers /></Route>
                     <Route path="/ContactUs"><ContactUs /></Route>
                 </Switch>
+                <Footer />
             </div>
         </Router>
     );

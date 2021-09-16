@@ -1,7 +1,8 @@
 import React from 'react';
-
+import './Pages.css';
+ 
 const Home = () => {
-    return <div>
+    return <div className="PageArea">
         <h1>Home</h1>
     </div>
 }
